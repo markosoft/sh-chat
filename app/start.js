@@ -1,7 +1,6 @@
 ﻿#!/usr/bin/env node
 var debug = require('debug')('SH_Chat');
 var http = require('http');
-const util = require('util');
 var crypto = require('crypto');
 var app;
 
@@ -30,7 +29,7 @@ function get_avatar_url(user) {
     var mymd5 = crypto.createHash('md5').update(user);
     //var rand = random(0, avatar_404.length);
     var end = '?s=24&d=wavatar';
-    return avatar_url + mymd5.digest("hex") + "/" + end
+    return avatar_url + mymd5.digest("hex") + "/" + end;
 }
 
 function random(low, high) {
@@ -42,13 +41,15 @@ var port = process.env.OPENSHIFT_NODEJS_PORT || 1234 || process.env.PORT;
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1' || env.NODE_IP;
 
 server.listen(port, ip, function () {
-    console.log('Express server listening on port ' + port);
+    console.log('Express server listening on ' + ip + ":" + port);
 });
 
 
 var users = {}, offline = {}, socks = {};
 
 io.on('connection', function (socket) {
+    console.log("io.on connect");
+
     socket.on('join', function (recv) {
         var user_name = recv.name;
         var user_id = recv.uid;
