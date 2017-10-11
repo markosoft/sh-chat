@@ -1,12 +1,11 @@
 ﻿#!/usr/bin/env node
 var debug = require('debug')('SH_Chat');
-var http = require('http');
 var crypto = require('crypto');
 var app;
 
 var localhost = false;
 
-if (process.env.OPENSHIFT_APP_NAME) {
+if (process.env.NON_LOCALHOST) {
     app = function (req, res) {
         res.end('Opa');
     };
@@ -17,8 +16,8 @@ else {
     localhost = true;
 }
 
-var server = http.createServer(app);
-var io = require('socket.io')(server);
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 
 console.log("localhost: " + localhost);
 
@@ -36,14 +35,8 @@ function random(low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
 
-
-var port = process.env.OPENSHIFT_NODEJS_PORT || 1234 || process.env.PORT;
-var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1' || env.NODE_IP;
-
-server.listen(port, ip, function () {
-    console.log('Express server listening on ' + ip + ":" + port);
-});
-
+var port = process.env.NODEJS_PORT || 1234 || process.env.PORT;
+//var ip = process.env.NODEJS_IP || '127.0.0.1' || env.NODE_IP;
 
 var users = {}, offline = {}, socks = {};
 
@@ -218,4 +211,9 @@ io.on('connection', function (socket) {
             }
         }
     });
+});
+
+
+http.listen(port, function () {
+    console.log('Express server listening on *:' + port);
 });
