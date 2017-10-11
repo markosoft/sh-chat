@@ -1,0 +1,27 @@
+﻿extends layout
+
+block content
+  script(src='http://code.jquery.com/jquery-1.11.1.js')
+  script(src='/javascripts/socket.io.js')
+  link(href='/stylesheets/style.css', rel='stylesheet')
+  script(src='/javascripts/main.js')
+  script.
+    /* Ovo menjati u PHP */
+    function GET(param) {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+    var $_GET = GET();
+    var id = "1";
+    if ('id' in $_GET) id = $_GET['id'];
+    var name = "Test " + id;
+    if ('name' in $_GET) name = $_GET['name'];
+    var avatar = "";
+    if ('avatar' in $_GET) avatar = $_GET['avatar'];
+    var profile = "http://forum.shaxball.com/profile.php?u=" + id;
+    /*                  */
+
+    SH_Chat.init(id, name, avatar, profile, 'test@test.com', 'ff0000', 'test');

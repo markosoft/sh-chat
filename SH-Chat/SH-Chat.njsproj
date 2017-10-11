@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>SH-Chat</Name>
+    <RootNamespace>SH-Chat</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>63f1b065-c504-4366-9f07-6132c6f494f3</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app\start.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="public\javascripts\main.js" />
+    <Compile Include="public\javascripts\socket.io.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\users.js" />
+    <Compile Include="app\start.js" />
+    <Content Include="package.json" />
+    <Content Include="public\emoticon\alien-symbol.png" />
+    <Content Include="public\emoticon\angel_emoticon.png" />
+    <Content Include="public\emoticon\angry_emoticon.png" />
+    <Content Include="public\emoticon\big-smile-emoticon-for-facebook.png" />
+    <Content Include="public\emoticon\confused-emoticon-wtf-symbol-for-facebook.png" />
+    <Content Include="public\emoticon\curly_lips_emoticon.png" />
+    <Content Include="public\emoticon\devil_emoticon.png" />
+    <Content Include="public\emoticon\facebook-cry-emoticon-crying-symbol.png" />
+    <Content Include="public\emoticon\facebook-frown-emoticon.png" />
+    <Content Include="public\emoticon\facebook-smiley-face-for-comments.png" />
+    <Content Include="public\emoticon\facebook-tongue-out-emoticon.png" />
+    <Content Include="public\emoticon\glasses_emoticon.png" />
+    <Content Include="public\emoticon\grumpy_emoticon.png" />
+    <Content Include="public\emoticon\heart_emoticon.png" />
+    <Content Include="public\emoticon\kiki_emoticon.png" />
+    <Content Include="public\emoticon\kiss_emoticon.png" />
+    <Content Include="public\emoticon\pacman_2.png" />
+    <Content Include="public\emoticon\poop-facebook-emoticon.png" />
+    <Content Include="public\emoticon\putnam-emoticon.png" />
+    <Content Include="public\emoticon\robot_emoticon.png" />
+    <Content Include="public\emoticon\shark_emoticon.png" />
+    <Content Include="public\emoticon\squinting-emoticon.png" />
+    <Content Include="public\emoticon\sunglasses_emoticon.png" />
+    <Content Include="public\emoticon\surprised_emoticon.png" />
+    <Content Include="public\emoticon\thumb-up-facebook-emoticon-like-symbol.png" />
+    <Content Include="public\emoticon\unsure_emoticon.png" />
+    <Content Include="public\emoticon\wink_emoticon.png" />
+    <Content Include="public\images\close.png" />
+    <Content Include="public\images\connect.png" />
+    <Content Include="public\images\disconnect.png" />
+    <Content Include="public\emoticon\pacman_emoticon.png" />
+    <Content Include="public\images\max.png" />
+    <Content Include="public\images\min.png" />
+    <Content Include="public\images\mute.png" />
+    <Content Include="public\images\offline.png" />
+    <Content Include="public\images\online.png" />
+    <Content Include="public\images\search.png" />
+    <Content Include="public\images\typing.png" />
+    <Content Include="public\images\unmute.png" />
+    <Content Include="public\emoticon\emoticon.json" />
+    <Content Include="public\mp3\popup.mp3" />
+    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\templates\chat-window.html" />
+    <Content Include="public\templates\chat-main.html" />
+    <Content Include="public\templates\msg-recv.html" />
+    <Content Include="public\templates\msg-sent.html" />
+    <Content Include="public\templates\online-user.html" />
+    <Content Include="README.md" />
+    <Content Include="typings.json" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\layout.jade" />
+    <Content Include="views\error.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\emoticon\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\mp3\" />
+    <Folder Include="public\templates\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\body-parser\" />
+    <Folder Include="typings\globals\cookie-parser\" />
+    <Folder Include="typings\globals\debug\" />
+    <Folder Include="typings\globals\depd\" />
+    <Folder Include="typings\globals\express-serve-static-core\" />
+    <Folder Include="typings\globals\express\" />
+    <Folder Include="typings\globals\inherits\" />
+    <Folder Include="typings\globals\jade\" />
+    <Folder Include="typings\globals\mime\" />
+    <Folder Include="typings\globals\mongodb\" />
+    <Folder Include="typings\globals\mongoose\" />
+    <Folder Include="typings\globals\morgan\" />
+    <Folder Include="typings\globals\ms\" />
+    <Folder Include="typings\globals\nedb\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\on-finished\" />
+    <Folder Include="typings\globals\qs\" />
+    <Folder Include="typings\globals\serve-favicon\" />
+    <Folder Include="typings\globals\serve-static\" />
+    <Folder Include="typings\globals\socket.io\" />
+    <Folder Include="typings\globals\stylus\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\depd\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express-serve-static-core\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\inherits\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mime\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mongodb\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mongoose\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\morgan\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\ms\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\nedb\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\on-finished\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\qs\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\serve-favicon\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\serve-static\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\socket.io\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\stylus\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

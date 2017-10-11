@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SH-Chat", "SH-Chat\SH-Chat.njsproj", "{63F1B065-C504-4366-9F07-6132C6F494F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5539A4B9-4D29-498D-84D9-A2622465AD51}"
+	ProjectSection(SolutionItems) = preProject
+		WE-Palette.css = WE-Palette.css
+		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F1B065-C504-4366-9F07-6132C6F494F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F1B065-C504-4366-9F07-6132C6F494F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F1B065-C504-4366-9F07-6132C6F494F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F1B065-C504-4366-9F07-6132C6F494F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

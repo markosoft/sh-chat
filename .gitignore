@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+/.vs/SH-Chat/v15/.suo
+/SH-Chat/obj/Debug

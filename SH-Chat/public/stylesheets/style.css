@@ -1,0 +1,288 @@
+.shchat-window {
+  position: fixed;
+  bottom: 0px;
+  font-size: 13px;
+  font-family: arial, helvetica, sans-serif;
+  z-index: 99999;
+  display: block;
+  color: #000;
+}
+.shchat-window div {
+  box-sizing: content-box !important;
+}
+.shchat-window img {
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: inline;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+#shchat-online-list {
+  right: 5px;
+}
+.shchat-header {
+  cursor: pointer;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  display: block;
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: left;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 1px 0 #194b7e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5f4d44), to(#5f4d44));
+  background: -webkit-linear-gradient(top, #5f4d44, #5f4d44);
+  background: -moz-linear-gradient(top, #5f4d44, #5f4d44);
+  background: -ms-linear-gradient(top, #5f4d44, #5f4d44);
+  background: -o-linear-gradient(top, #5f4d44, #5f4d44);
+  background: linear-gradient(to bottom, #5f4d44, #5f4d44);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+  width: 202px;
+}
+.shchat-header:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5f4d44), to(#3c312b));
+  background: -webkit-linear-gradient(top, #5f4d44, #3c312b);
+  background: -moz-linear-gradient(top, #5f4d44, #3c312b);
+  background: -ms-linear-gradient(top, #5f4d44, #3c312b);
+  background: -o-linear-gradient(top, #5f4d44, #3c312b);
+  background: linear-gradient(to bottom, #5f4d44, #3c312b);
+}
+.shchat-header.newmsg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#718c5a), to(#718c5a));
+  background: -webkit-linear-gradient(top, #718c5a, #718c5a);
+  background: -moz-linear-gradient(top, #718c5a, #718c5a);
+  background: -ms-linear-gradient(top, #718c5a, #718c5a);
+  background: -o-linear-gradient(top, #718c5a, #718c5a);
+  background: linear-gradient(to bottom, #718c5a, #718c5a);
+}
+.shchat-header.newmsg:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#939e7f), to(#718c5a));
+  background: -webkit-linear-gradient(top, #939e7f, #718c5a);
+  background: -moz-linear-gradient(top, #939e7f, #718c5a);
+  background: -ms-linear-gradient(top, #939e7f, #718c5a);
+  background: -o-linear-gradient(top, #939e7f, #718c5a);
+  background: linear-gradient(to bottom, #939e7f, #718c5a);
+}
+.shchat-big {
+  width: 232px;
+}
+.shchat-header-count,
+.shchat-header-username {
+  padding-left: 10px;
+  color: #fff;
+}
+.shchat-header-count {
+  font-weight: bold;
+}
+.shchat-header-username a {
+  color: inherit;
+  text-decoration: underline;
+}
+.shchat-header-minmax {
+  padding-right: 5px;
+  float: right;
+}
+.shchat-header img {
+  margin-right: 2px;
+}
+.shchat-pause {
+  margin-right: 5px !important;
+}
+#shchat-users,
+.shchat-field {
+  border: 1px solid #555;
+  background: #fff;
+  font-size: 13px;
+}
+#shchat-users {
+  width: 200px;
+}
+#shchat-list {
+  width: 200px;
+  max-height: 270px;
+  overflow: auto;
+}
+.shchat-field {
+  width: 230px;
+  height: 270px;
+  hax-height: 270px;
+}
+.shchat-user {
+  cursor: pointer;
+  height: 26px;
+  line-height: 100%;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  width: 99%;
+}
+.shchat-user:hover {
+  background-color: #b2c9f1;
+  color: #000;
+  text-align: left;
+}
+.shchat-userlist-avatar {
+  float: left;
+  padding-bottom: 1px;
+  padding-left: 5px;
+  padding-top: 1px;
+  text-align: left;
+}
+.shchat-userlist-avatar img {
+  height: 22px;
+  width: 22px;
+  border-radius: 2px;
+  text-align: left;
+}
+.shchat-userlist-name {
+  float: left;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-top: 4px;
+  text-align: left;
+}
+.shchat-msgs {
+  background: #e5e5e5;
+  margin: 0;
+  padding: 4px;
+  height: 210px;
+  overflow-x: hidden;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+.shchat-input {
+  width: 100%;
+  height: 50px;
+}
+.shchat-text {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-size: 13px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  resize: none;
+  box-sizing: border-box;
+/* For IE and modern versions of Chrome */
+  -moz-box-sizing: border-box;
+/* For Firefox                          */
+  -webkit-box-sizing: border-box;
+/* For Safari                           */
+  border: none;
+  overflow-x: hidden;
+  padding: 2px;
+  color: #000;
+  background: #fff;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font-family: Calibri, Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: none;
+  font-variant: normal;
+  text-shadow: none;
+}
+.shchat-msg-container {
+  padding: 3px;
+  overflow: hidden;
+  display: flex;
+}
+.shchat-msg-container:last-child {
+  padding-bottom: 10px;
+}
+.shchat-msg-container:first-child {
+  padding-top: 8px;
+}
+.shchat-msg-message {
+  width: 85%;
+  background: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  max-width: 100%;
+}
+.shchat-msg-message > p {
+  font-size: 13px;
+  margin: 0 0 0.2rem 0;
+  white-space: pre-wrap;
+/* css-3 */
+  white-space: -moz-pre-wrap;
+/* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+/* Opera 4-6 */
+  white-space: -o-pre-wrap;
+/* Opera 7 */
+  word-wrap: break-word;
+/* Internet Explorer 5.5+ */
+}
+.shchat-msg-message > .shchat-msg-time {
+  font-size: 10px;
+  color: #ccc;
+}
+.shchat-msg-img {
+  padding: 0;
+  width: 22px;
+  min-width: 22px;
+}
+.shchat-msg-sent {
+  margin-right: 0;
+}
+.shchat-msg-sent > .shchat-msg-time {
+  float: right;
+}
+.shchat-msg-recv {
+  margin-left: 0;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 4px;
+}
+#shchat-search {
+  font-size: 16px;
+  background-color: #fff;
+  background-position: 4px 3px;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  border-top: 1px solid;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  color: #000;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-sizing: border-box;
+/* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+/* Firefox, other Gecko */
+  box-sizing: border-box;
+/* Opera/IE 8+ */
+  font-family: Calibri, Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: none;
+  font-variant: normal;
+  text-shadow: none;
+}

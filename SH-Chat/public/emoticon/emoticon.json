@@ -1,0 +1,39 @@
+﻿{
+  "default": {
+    ":(": "facebook-frown-emoticon.png",
+    ":'(": "facebook-cry-emoticon-crying-symbol.png",
+    ":)": "facebook-smiley-face-for-comments.png",
+    ":/": "unsure_emoticon.png",
+    ":\\": "unsure_emoticon.png",
+    ":D": "big-smile-emoticon-for-facebook.png",
+    ":o": "surprised_emoticon.png",
+    ":P": "facebook-tongue-out-emoticon.png",
+    ":v": "pacman_emoticon.png",
+    ":v2": "pacman_2.png",
+    ";)": "wink_emoticon.png",
+    "^_^": "kiki_emoticon.png",
+    ">:(": "grumpy_emoticon.png",
+    "O:)": "angel_emoticon.png",
+    "3:)": "devil_emoticon.png",
+    "o.O": "confused-emoticon-wtf-symbol-for-facebook.png",
+    "-_-": "squinting-emoticon.png",
+    ">:o": "angry_emoticon.png",
+    ":*": "kiss_emoticon.png",
+    "8-)": "glasses_emoticon.png",
+    "B-)": "glasses_emoticon.png",
+    "8-|": "sunglasses_emoticon.png",
+    "B-|": "sunglasses_emoticon.png",
+    ":3": "curly_lips_emoticon.png",
+    "<3": "heart_emoticon.png",
+    "(^^^)": "shark_emoticon.png",
+    "(y)": "thumb-up-facebook-emoticon-like-symbol.png",
+    ":poop:": "poop-facebook-emoticon.png",
+    ":putnam:": "putnam-emoticon.png",
+    ":|]": "robot_emoticon.png",
+    ":alien:": "alien-symbol.png"
+  },
+  "custom": {
+    "[[*]]": "http://www.shaxball.com/small.php?img=/media/com_joomleague/teams/*.png",
+    "{{*}}": "http://www.shaxball.com/media/com_joomleague/flags/*.png"
+  }
+}
