@@ -1,0 +1,2 @@
+d:\Users\marko\documents\visual studio 2015\Projects\SH-Chat\SH-Chat\obj\Debug\SH-Chat.njsprojResolveAssemblyReference.cache
+d:\Users\marko\documents\visual studio 2015\Projects\SH-Chat\SH-Chat\bin\Microsoft.NodejsTools.WebRole.dll

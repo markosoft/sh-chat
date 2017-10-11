@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SH-Chat", "SH-Chat\SH-Chat.njsproj", "{63F1B065-C504-4366-9F07-6132C6F494F3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5539A4B9-4D29-498D-84D9-A2622465AD51}"
-	ProjectSection(SolutionItems) = preProject
-		WE-Palette.css = WE-Palette.css
-		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
-	EndProjectSection
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SH-Chat", "SH-Chat.njsproj", "{63F1B065-C504-4366-9F07-6132C6F494F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1B7B677-F3AC-4138-A0A4-B61F81F1096C}
 	EndGlobalSection
 EndGlobal
