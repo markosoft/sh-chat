@@ -20,7 +20,7 @@ else {
 var server = http.createServer(app);
 var io = require('socket.io')(server);
 
-
+console.log("localhost: " + localhost);
 
 var avatar_url = "http://www.gravatar.com/avatar/";
 var avatar_404 = ['mm', 'identicon', 'monsterid', 'wavatar', 'retro'];
