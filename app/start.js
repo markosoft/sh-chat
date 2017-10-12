@@ -212,8 +212,6 @@ io.on('connection', function (socket) {
     });
 
     socket.emit("client-connected", "oh yes");
-
-    console.log(socket);
 });
 
 
