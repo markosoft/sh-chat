@@ -369,7 +369,7 @@ var SH_Chat = {
                 var seen = data.seen;
 
                 var day = date.getDate();
-                var month = date.getMonth();
+                var month = date.getMonth() + 1;
                 var year = date.getFullYear();
 
                 var hour = date.getHours().toString();
@@ -790,7 +790,7 @@ var SH_Chat = {
                 var msg = replaceEmoticon(urlify(data.msg));
 
                 var day = date.getDate();
-                var month = date.getMonth();
+                var month = date.getMonth() + 1;
                 var year = date.getFullYear();
 
                 var hour = date.getHours().toString();
