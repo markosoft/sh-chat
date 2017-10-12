@@ -189,7 +189,7 @@ var SH_Chat = {
 
         function loadConnection() {
             if (host == '') socket = io();
-            else socket = io.connect(host + ':' + port);
+            else socket = io.connect(host);
 
             socket.on('connect', function () {
 

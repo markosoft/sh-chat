@@ -32,7 +32,7 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="public\javascripts\main.js" />
-    <Compile Include="public\javascripts\socket.io.js" />
+    <Compile Include="public\javascripts\socket.io.slim.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
     <Compile Include="app\start.js" />
