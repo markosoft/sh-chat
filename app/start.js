@@ -41,7 +41,7 @@ var port = process.env.NODEJS_PORT || 1234 || process.env.PORT;
 var users = {}, offline = {}, socks = {};
 
 io.on('connection', function (socket) {
-    console.log("io.on connect");
+    //console.log("io.on connect");
 
     socket.on('join', function (recv) {
         var user_name = recv.name;
@@ -210,8 +210,6 @@ io.on('connection', function (socket) {
             }
         }
     });
-
-    socket.emit("client-connected", "oh yes");
 });
 
 
