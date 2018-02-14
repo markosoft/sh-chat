@@ -37,7 +37,7 @@ function random(low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
 
-var port = process.env.NODEJS_PORT || 80 || process.env.PORT;
+var port = process.env.NODEJS_PORT || 8080 || process.env.PORT;
 //var ip = process.env.NODEJS_IP || '127.0.0.1' || env.NODE_IP;
 
 var users = {}, offline = {}, socks = {};
