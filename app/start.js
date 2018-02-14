@@ -19,6 +19,8 @@ else {
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
+io.set('transports', ['websocket']);
+
 console.log("localhost: " + localhost);
 
 var avatar_url = "http://www.gravatar.com/avatar/";
@@ -35,13 +37,13 @@ function random(low, high) {
     return Math.floor(Math.random() * (high - low) + low);
 }
 
-var port = process.env.NODEJS_PORT || 1234 || process.env.PORT;
+var port = process.env.NODEJS_PORT || 80 || process.env.PORT;
 //var ip = process.env.NODEJS_IP || '127.0.0.1' || env.NODE_IP;
 
 var users = {}, offline = {}, socks = {};
 
 io.on('connection', function (socket) {
-    //console.log("io.on connect");
+    console.log("io.on connect");
 
     socket.on('join', function (recv) {
         var user_name = recv.name;
