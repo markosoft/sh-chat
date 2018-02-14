@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-!function (a) { var b = !1; if ("function" == typeof define && define.amd && (define(a), b = !0), "object" == typeof exports && (module.exports = a(), b = !0), !b) { var c = window.Cookies, d = window.Cookies = a(); d.noConflict = function () { return window.Cookies = c, d } } } (function () { function a() { for (var a = 0, b = {}; a < arguments.length; a++) { var c = arguments[a]; for (var d in c) b[d] = c[d] } return b } function b(c) { function d(b, e, f) { var g; if ("undefined" != typeof document) { if (arguments.length > 1) { if (f = a({ path: "/" }, d.defaults, f), "number" == typeof f.expires) { var h = new Date; h.setMilliseconds(h.getMilliseconds() + 864e5 * f.expires), f.expires = h } try { g = JSON.stringify(e), /^[\{\[]/.test(g) && (e = g) } catch (a) { } return e = c.write ? c.write(e, b) : encodeURIComponent(String(e)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), b = encodeURIComponent(String(b)), b = b.replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent), b = b.replace(/[\(\)]/g, escape), document.cookie = [b, "=", e, f.expires ? "; expires=" + f.expires.toUTCString() : "", f.path ? "; path=" + f.path : "", f.domain ? "; domain=" + f.domain : "", f.secure ? "; secure" : ""].join("") } b || (g = {}); for (var i = document.cookie ? document.cookie.split("; ") : [], j = /(%[0-9A-Z]{2})+/g, k = 0; k < i.length; k++) { var l = i[k].split("="), m = l.slice(1).join("="); '"' === m.charAt(0) && (m = m.slice(1, -1)); try { var n = l[0].replace(j, decodeURIComponent); if (m = c.read ? c.read(m, n) : c(m, n) || m.replace(j, decodeURIComponent), this.json) try { m = JSON.parse(m) } catch (a) { } if (b === n) { g = m; break } b || (g[n] = m) } catch (a) { } } return g } } return d.set = d, d.get = function (a) { return d.call(d, a) }, d.getJSON = function () { return d.apply({ json: !0 }, [].slice.call(arguments)) }, d.defaults = {}, d.remove = function (b, c) { d(b, "", a(c, { expires: -1 })) }, d.withConverter = b, d } return b(function () { }) });
+!function (a) { var b = !1; if ("function" == typeof define && define.amd && (define(a), b = !0), "object" == typeof exports && (module.exports = a(), b = !0), !b) { var c = window.Cookies, d = window.Cookies = a(); d.noConflict = function () { return window.Cookies = c, d } } }(function () { function a() { for (var a = 0, b = {}; a < arguments.length; a++) { var c = arguments[a]; for (var d in c) b[d] = c[d] } return b } function b(c) { function d(b, e, f) { var g; if ("undefined" != typeof document) { if (arguments.length > 1) { if (f = a({ path: "/" }, d.defaults, f), "number" == typeof f.expires) { var h = new Date; h.setMilliseconds(h.getMilliseconds() + 864e5 * f.expires), f.expires = h } try { g = JSON.stringify(e), /^[\{\[]/.test(g) && (e = g) } catch (a) { } return e = c.write ? c.write(e, b) : encodeURIComponent(String(e)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g, decodeURIComponent), b = encodeURIComponent(String(b)), b = b.replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent), b = b.replace(/[\(\)]/g, escape), document.cookie = [b, "=", e, f.expires ? "; expires=" + f.expires.toUTCString() : "", f.path ? "; path=" + f.path : "", f.domain ? "; domain=" + f.domain : "", f.secure ? "; secure" : ""].join("") } b || (g = {}); for (var i = document.cookie ? document.cookie.split("; ") : [], j = /(%[0-9A-Z]{2})+/g, k = 0; k < i.length; k++) { var l = i[k].split("="), m = l.slice(1).join("="); '"' === m.charAt(0) && (m = m.slice(1, -1)); try { var n = l[0].replace(j, decodeURIComponent); if (m = c.read ? c.read(m, n) : c(m, n) || m.replace(j, decodeURIComponent), this.json) try { m = JSON.parse(m) } catch (a) { } if (b === n) { g = m; break } b || (g[n] = m) } catch (a) { } } return g } } return d.set = d, d.get = function (a) { return d.call(d, a) }, d.getJSON = function () { return d.apply({ json: !0 }, [].slice.call(arguments)) }, d.defaults = {}, d.remove = function (b, c) { d(b, "", a(c, { expires: -1 })) }, d.withConverter = b, d } return b(function () { }) });
 
 var SH_Chat = {
 
@@ -49,6 +49,7 @@ var SH_Chat = {
 
         var space = 5;
         var list_width = 0;//202;
+        var list_right = 0;
         var window_width = 0;//232;
         var opened = [];
         var tmp_opened = [];
@@ -103,13 +104,13 @@ var SH_Chat = {
                         tmp_opened.push({ id: tmp[0], min: min });
                     }
                 }
-                
+
             }
             catch (e) {
                 opened = [];
                 save_cookies();
             }
-            
+
         }
 
         function save_cookies() {
@@ -140,7 +141,7 @@ var SH_Chat = {
         }
 
         load_cookies();
-        
+
 
         var is_search = false;
 
@@ -197,7 +198,7 @@ var SH_Chat = {
 
                 socket.on('confirm', function (recv) {
 
-                    
+
                     if (recv.op == 'reject') {
                         if (loadedMain) jQuery1_11_1('#shchat-main').remove();
                         reject = true;
@@ -207,6 +208,8 @@ var SH_Chat = {
                         if (recv.first) {
                             var user = recv.user;
                             jQuery1_11_1.post(php_path + "php/ajax.php", { action: "add_user", 'uid': user.uid, 'username': user.name, 'avatar': user.avatar, 'profile': user.profile, 'color': user.color, name: name_g, email: email_g, security: security_g });
+
+                            //console.log(user);
                         }
                         connection = recv.online;
                         loadedConnection = true;
@@ -238,6 +241,7 @@ var SH_Chat = {
 
             jQuery1_11_1('body').append(replaceAll(chat_main, '{path}', path));
             list_width = parseInt(jQuery1_11_1('#shchat-online-list').css('width'));
+            list_right = parseInt(jQuery1_11_1('#shchat-online-list').css('right'));
 
             if (online_min) min_max('shchat-users', 'min', false, true);
 
@@ -275,8 +279,7 @@ var SH_Chat = {
 
                 mute_unmute(sound, true);
 
-                for (var i = 0; i < events.length; i++)
-                {
+                for (var i = 0; i < events.length; i++) {
                     handle_incoming(events[i]);
                 }
                 loadingEnded = true;
@@ -454,7 +457,7 @@ var SH_Chat = {
             } else if (action == 'usrlist') {
 
                 online_users = {};
-                
+
                 for (var i in recv.user) {
 
                     if (i != id_g) {
@@ -463,8 +466,8 @@ var SH_Chat = {
                         online_users[uid] = current;
                     }
                 }
-                
-                if(!is_search) update_online_list();
+
+                if (!is_search) update_online_list();
             } else {
                 console.log('ERROR');
             }
@@ -549,7 +552,7 @@ var SH_Chat = {
                         }
                     }
                 }
-                
+
                 save_cookies();
                 socket.emit('self', { 'action': 'minmax', 'obj': obj, 'state': state });
             }
@@ -574,7 +577,7 @@ var SH_Chat = {
             if (self) {
                 if (!jQuery1_11_1('#shchat-window-' + uid).length) {
 
-                    var offset = 2 * space + list_width + opened.length * (window_width + space);
+                    var offset = list_right + list_width + space + opened.length * (window_width + space);
 
                     var json_for_replace = {
                         '{date}': path,
@@ -625,20 +628,20 @@ var SH_Chat = {
 
             if (self) {
                 var obj = jQuery1_11_1('#' + window);
-                
+
                 obj.hide('fast', function () {
                     obj.remove();
 
                     var match = -1;
                     for (var i = 0; i < opened.length; i++) {
-                        if (opened[i].id == window.replace('shchat-window-','')) {
+                        if (opened[i].id == window.replace('shchat-window-', '')) {
                             match = i;
                             opened.splice(i, 1);
                             i--;
                         }
                         else {
                             if (match > -1 && i >= match) {
-                                var offset = 2 * space + list_width + i * (window_width + space);
+                                var offset = list_right + list_width + space + i * (window_width + space);
                                 jQuery1_11_1('#shchat-window-' + opened[i].id).css("right", offset);
                             }
 
@@ -935,7 +938,7 @@ var SH_Chat = {
         jQuery1_11_1(document).on('keyup', '.shchat-text', function (e) {
             var uid = jQuery1_11_1(this).attr('id').replace('shchat-text-', '');
             var keyCode = e.keyCode || e.which;
-            
+
             if (keyCode == 13 && !e.shiftKey) {
 
                 var msg = jQuery1_11_1(this).val().trim().substr(0, 10000);
@@ -958,7 +961,7 @@ var SH_Chat = {
 
                 var match = -1;
                 for (var i = 0; i < opened.length; i++) {
-                    if (opened[i].id == jQuery1_11_1(this).parents('.shchat-window').attr('id').replace('shchat-window-','')) {
+                    if (opened[i].id == jQuery1_11_1(this).parents('.shchat-window').attr('id').replace('shchat-window-', '')) {
                         match = i;
                         break;
                     }
@@ -975,10 +978,9 @@ var SH_Chat = {
             var keyCode = e.keyCode || e.which;
             read_msg(uid);
 
-            if (keyCode != 27 && keyCode != 9 && (keyCode != 13 || e.shiftKey))
-            {
+            if (keyCode != 27 && keyCode != 9 && (keyCode != 13 || e.shiftKey)) {
 
-                 socket.emit('user_typing', { 'user_id': uid });
+                socket.emit('user_typing', { 'user_id': uid });
             }
             else {
                 if (keyCode == 13 && !e.shiftKey) {
@@ -986,7 +988,7 @@ var SH_Chat = {
                     save_enter = "";
                 }
                 return false;
-            } 
+            }
         });
 
         jQuery1_11_1(document).on('keypress', '.shchat-text', function (e) {
@@ -1048,7 +1050,7 @@ var SH_Chat = {
         }
 
         function ajax_search(data) {
-            console.log(data);
+            //console.log(data);
             jQuery1_11_1('#shchat-list').html("");
             var n = 0;
             for (var i = 0; i < data.length; i++) {
@@ -1065,7 +1067,7 @@ var SH_Chat = {
                     };
                     jQuery1_11_1('#shchat-list').append(replaceJSON(online_user, json_for_replace));
                 }
-                
+
             }
             jQuery1_11_1('#shchat-count').text(n);
             jQuery1_11_1('#shchat-list').css('height', 27 * n);
