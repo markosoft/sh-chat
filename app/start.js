@@ -19,8 +19,6 @@ else {
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
-io.set('transports', ['websocket']);
-
 console.log("localhost: " + localhost);
 
 var avatar_url = "http://www.gravatar.com/avatar/";
